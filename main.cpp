@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-#include "employee.cpp"
 #include "patient.cpp"
 #include "equipment.cpp"
 
@@ -9,11 +8,10 @@ int main()
 {
 
     int ask1,ask2, age, patNum, hurt, pain, price=0;
-    string assignDr, name, name2, sickness;
-    char gender, c;
+    string assignDr, name, name2, sickness, line;
+    char gender;
     ofstream fileOut;
     ifstream fileIn;
-    Employee emp;
     Patient pat;
     Equipment equ;
 
@@ -29,7 +27,7 @@ int main()
 
     if (ask1 == 1){
         again2:
-        cout << "PASSCODE: ";
+        cout << "PASSCODE(b to back): ";
         cin >> name;
         if (name == "PAA"){
     
@@ -56,12 +54,13 @@ int main()
                 pat.getData2();
                 cout << "Patitent Added!!"<<endl;
                 cout << "-----------------------------------------------" << endl;
-                fileOut.open("Patients.txt", ios::in | ios::out | ios::app);
-                fileOut <<"Patient Name: "+ name2 + "\n";
+
+                fileOut.open("Patients.txt", ios::app);
+                fileOut <<"Patient Name: "<< name2 << "\n";
                 fileOut <<"Patient Age: "<< age << "\n";
                 fileOut <<"Gender: "<< gender << "\n";
-                fileOut <<"Patient's Assigned Doctor/Nurse: "+ assignDr + "\n";
-                fileOut <<"Patients condition: "+ sickness + "\n";
+                fileOut <<"Patient's Assigned Doctor/Nurse: "<< assignDr << "\n";
+                fileOut <<"Patients condition: "<< sickness << "\n";
                 fileOut << "-----------------------------------------------" << endl;
                 fileOut.close();
                 goto restart;
@@ -70,13 +69,9 @@ int main()
             else if (patNum == 2){
 
                 fileIn.open("Patients.txt");
-                if (fileIn.fail()){
-                    cout << "Error opening this file" << endl;
-                    return 1;
-                }
-
-                while (fileIn.get(c)){
-                    cout << c;
+                
+                while (getline(fileIn, line)){
+                    cout << line << endl;
                 }
                 fileIn.close();
             goto restart;
@@ -104,8 +99,8 @@ int main()
                     cout << "Equipment Added!!"<<endl;
                     cout << "-----------------------------------------------" << endl;
                 
-                    fileOut.open("Equipments.txt", ios::in | ios::out | ios::app);
-                    fileOut <<"Name: "+ name + "\n";
+                    fileOut.open("Equipments.txt", ios::app);
+                    fileOut <<"Name: "<< name << "\n";
                     fileOut <<"Quantity: "<< ask1 << "\n";
                     fileOut <<"Use: "<< name2 << "\n";
                     fileOut <<"Total Price: "<< price << "\n";
@@ -116,13 +111,9 @@ int main()
             
                 else if (patNum == 2){
                 fileIn.open("Equipments.txt");
-                if (fileIn.fail()){
-                    cout << "Error opening this file" << endl;
-                    return 1;
-                }
 
-                while (fileIn.get(c)){
-                    cout << c;
+                while (getline(fileIn,line)){
+                    cout << line << endl;
                 }
                 fileIn.close();
                 goto restart;
@@ -130,6 +121,9 @@ int main()
             cout << "-----------------------------------------------" << endl;
             }
             
+        }
+        else if (name == "b" || name == "B"){
+            goto restart;
         }
         else{
             cout << "WRONG PASSCODE!!!"<< endl;
@@ -147,51 +141,12 @@ int main()
         cout << "-----------------------------------------------" << endl;
         
         if (ask2 == 1){
-            emp.setData("Prof. Ayele Alemu", 60, "PHD in Neuropsychiatry and Neurosurgeon");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Prof. Gemechu Tulu", 57, "PHD in brain nurology");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Dr. Yilikal Tadele", 38, "Doctor of Osteopathic Medicine");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Dr. Nigist Haile", 36, "Doctor of Medicine (MD)");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Dr. Biruk Tasew", 30, "Doctor of Medicine (MD)");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Dr. Dagim Tesfaye", 29, "Doctor of Medicine (MD)");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Dr. Eleni Asfaw", 31, "Doctor of Medicine (MD)");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Dr. Yonathan Bekele", 32, "Doctor of Medicine (MD)");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Nurse Hermela Nebiyu", 27, "Bachelor of Science in Nursing (BSN)");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Nurse Chaltu Gemechu", 36, "Bachelor of Science in Nursing (BSN)");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Nurse Lideta Ayele", 25, "Bachelor of Science in Nursing (BSN)");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Nurse Nahily Asarf", 31, "Bachelor of Science in Nursing (BSN)");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Nurse Kalkidan Gobena", 29, "Associate Degree in Nursing (ADN)");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Nurse Kalkidan Kiros", 28, "Diploma in Nursing");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
-            emp.setData("Nurse Elithabeth Mekuriya", 30, "Associate Degree in Nursing (ADN)");
-            emp.getData();
-            cout << "-----------------------------------------------" << endl;
+            fileIn.open("Employee.txt");
+            
+            while (getline(fileIn,line)){
+                cout << line << endl;
+            }
+            fileIn.close();
             goto restart;
         }
 
@@ -347,17 +302,12 @@ int main()
             int lines = 0;
             string line;
             fileIn.open("EMERGENCY.txt");
-
-            if (fileIn.fail()){
-                cout << "Error opening this file" << endl;
-                return 1;
-            }
-            while (!fileIn.eof()){
-                getline(fileIn, line);
+            
+            while (getline(fileIn, line)){
                 lines++;
             }
             fileIn.close();
-            cout << "\nNo of taken emergency beds: " <<lines/6 << "/10"<< endl;
+            cout << "\nNo of taken emergency beds: " << lines/6 << "/10"<< endl;
 
             if ((lines/6) >= 10){
                 cout << "Emergency beds are fully occupied!!" << endl;
@@ -380,26 +330,23 @@ int main()
                 pat.getData2();
                 cout << "Emergency Patitent Added!!"<<endl;
                 cout << "-----------------------------------------------" << endl;
-                fileOut.open("EMERGENCY.txt", ios::in | ios::out | ios::app);
-                fileOut <<"Patient Name: "+ name2 + "\n";
+                fileOut.open("EMERGENCY.txt", ios::app);
+                fileOut <<"Patient Name: "<< name2 << "\n";
                 fileOut <<"Patient Age: "<< age << "\n";
                 fileOut <<"Gender: "<< gender << "\n";
-                fileOut <<"Patient's Assigned Doctor/Nurse: "+ assignDr + "\n";
-                fileOut <<"Patients condition: "+ sickness + "\n";
+                fileOut <<"Patient's Assigned Doctor/Nurse: "<< assignDr << "\n";
+                fileOut <<"Patients condition: "<< sickness << "\n";
                 fileOut << "-----------------------------------------------" << endl;
                 fileOut.close();
                 goto restart;
         }
         else if (patNum == 2){
             fileIn.open("EMERGENCY.txt");
-            if (fileIn.fail()){
-                cout << "Error opening this file" << endl;
-                return 1;
+
+            while (getline(fileIn,line)){
+                cout << line << endl;
             }
 
-            while (fileIn.get(c)){
-                cout << c;
-            }
             fileIn.close();
             goto restart;
         }
