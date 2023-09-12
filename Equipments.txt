@@ -1,0 +1,55 @@
+Name: Microscopes
+Quantity: 4
+Use: Used_for_examining_blood_smears,_tissue_samples,_and_other_specimens
+Total Price: 40000
+-----------------------------------------------
+Name: Centrifuges
+Quantity: 5
+Use: Used_to_separate_blood_components,_such_as_plasma_and_cells,_for_diagnostic_testing
+Total Price: 45000
+-----------------------------------------------
+Name: Urine_analyzers
+Quantity: 3
+Use: Analyze_urine_samples_for_various_parameters
+Total Price: 6000
+-----------------------------------------------
+Name: PCR_machines
+Quantity: 2
+Use: Used_for_amplifying_and_detecting_DNA_or_RNA_sequences
+Total Price: 10000
+-----------------------------------------------
+Name: X-Ray
+Quantity: 2
+Use: Used_to_detect_problems_affecting_soft_tissue,_such_as_internal_organs
+Total Price: 100000
+-----------------------------------------------
+Name: MRI
+Quantity: 1
+Use: Used_for_disease_detection,_diagnosis,_and_treatment_monitoring
+Total Price: 150000
+-----------------------------------------------
+Name: Syringes
+Quantity: 40
+Use: Used_to_inject_medication_into_or_withdraw_fluid_from_the_body
+Total Price: 4000
+-----------------------------------------------
+Name: Refrigerators_and_freezers
+Quantity: 2
+Use: Used_for_storing_reagents,_samples,_and_specimens_at_specific_temperatures
+Total Price: 80000
+-----------------------------------------------
+Name: Cryogenic_storage_tanks
+Quantity: 4
+Use: Used_for_long-term_storage_of_biological_samples
+Total Price: 24000
+-----------------------------------------------
+Name: Personal_protective_equipment_(PPE)
+Quantity: 50
+Use: Essential_safety_equipment,_including_gloves,_lab_coats,_goggles,_and_masks
+Total Price: 150000
+-----------------------------------------------
+Name: Blood_bank_equipment
+Quantity: 8
+Use: Includes_blood_typing_and_cross-matching_devices,_blood_storage_refrigerators,_and_blood_component_separators
+Total Price: 32000
+-----------------------------------------------

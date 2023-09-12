@@ -1,0 +1,18 @@
+Name: Mr. Alemu Abebe
+Age: 64
+Gender: M
+Assigned Doctor/Nurse: Dr. Yilikal Tadele
+Patient condition: Critical in Influenza (Flu)
+-----------------------------------------------
+Name: Mr Nega Tesema
+Age: 57
+Gender: M
+Assigned Doctor/Nurse: Dr. Nigist Haile
+Patient condition: Pneumonia
+-----------------------------------------------
+Name: Mr Abebe Tsega
+Age: 38
+Gender: M
+Assigned Doctor/Nurse: Dr. Biruk Tasew
+Patient condition: Advanced Stage HIV/AIDS
+-----------------------------------------------

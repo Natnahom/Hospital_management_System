@@ -1,0 +1,18 @@
+Patient Name: Abru_Gebeyew
+Patient Age: 56
+Gender: M
+Patient's Assigned Doctor/Nurse: Dr_Dagim_Tesfaye
+Patients condition: broken_leg
+-----------------------------------------------
+Patient Name: Ayelech_Girma
+Patient Age: 49
+Gender: F
+Patient's Assigned Doctor/Nurse: Dr_Eleni_Asfaw
+Patients condition: Car_accident
+-----------------------------------------------
+Patient Name: Gebeyew_Abebe
+Patient Age: 44
+Gender: M
+Patient's Assigned Doctor/Nurse: Dr_Yabsira_Lema
+Patients condition: Head_trauma
+-----------------------------------------------

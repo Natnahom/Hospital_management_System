@@ -1,0 +1,60 @@
+Name: Prof. Ayele Alemu
+Age: 60 
+Qualification: PHD in Neuropsychiatry and Neurosurgeon
+-----------------------------------------------
+Name: Prof. Gemechu Tulu 
+Age: 57 
+Qualification: PHD in brain nurology
+-----------------------------------------------
+Name: Dr. Yilikal Tadele
+Age: 38
+Qualification: Doctor of Osteopathic Medicine
+-----------------------------------------------
+Name: Dr. Nigist Haile 
+Age: 36
+Qualification: Doctor of Medicine (MD)
+-----------------------------------------------
+Name: Dr. Biruk Tasew 
+Age: 30
+Qualification: Doctor of Medicine (MD)
+-----------------------------------------------
+Name: Dr. Dagim Tesfaye 
+Age: 29
+Qualification: Doctor of Medicine (MD)
+-----------------------------------------------
+Name: Dr. Eleni Asfaw 
+Age: 31
+Qualification: Doctor of Medicine (MD)
+-----------------------------------------------
+Name: Dr. Yonathan Bekele
+Age: 32
+Qualification: Doctor of Medicine (MD)
+-----------------------------------------------
+Name: Nurse Hermela Nebiyu 
+Age: 27
+Qualification: Bachelor of Science in Nursing (BSN)
+-----------------------------------------------
+Name: Nurse Chaltu Gemechu 
+Age: 36 
+Qualification: Bachelor of Science in Nursing (BSN)
+-----------------------------------------------
+Name: Nurse Lideta Ayele 
+Age: 25 
+Qualification: Bachelor of Science in Nursing (BSN)
+-----------------------------------------------
+Name: Nurse Nahily Asarf 
+Age: 31
+Qualification: Bachelor of Science in Nursing (BSN)           
+-----------------------------------------------
+Name: Nurse Kalkidan Gobena 
+Age: 29 
+Qualification: Associate Degree in Nursing (ADN)
+-----------------------------------------------
+Name: Nurse Kalkidan Kiros 
+Age: 28 
+Qualification: Diploma in Nursing
+-----------------------------------------------
+Name: Nurse Elithabeth Mekuriya 
+Age: 30 
+Qualification: Associate Degree in Nursing (ADN)
+-----------------------------------------------
