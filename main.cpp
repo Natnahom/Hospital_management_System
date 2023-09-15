@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-
+    // Variables used in the program
     int ask1,ask2, age, patNum, hurt, pain, price=0;
     string assignDr, name, name2, sickness, line;
     char gender;
@@ -15,6 +15,7 @@ int main()
     Patient pat;
     Equipment equ;
 
+    //Ask the user to choose
     cout << "            Welcome to MediCare"<< endl;
     cout << "********************************************"<< endl;
     restart:
@@ -24,19 +25,22 @@ int main()
          << "3. EMERGENCY"<< endl;
     cin >> ask1;
     cout << "-----------------------------------------------" << endl;
-
+    
+    //Checking if the user knows the passcode
     if (ask1 == 1){
         again2:
         cout << "PASSCODE(b to back): ";
         cin >> name;
         if (name == "PAA"){
     
+            //If passcode is correct then ask the user to choose
             cout << "1. Add a patient"<< endl
                  << "2. Access patient information"<<endl
                  << "3. Medical inventory"<<endl;
             cin >> patNum;
             cout << "-----------------------------------------------" << endl;
-
+        
+            //Entering patient information
             if (patNum == 1){
                 cout << "Instead of a space between words please enter \"_\" \n";
                 cout << "Patient Name: ";
@@ -55,6 +59,7 @@ int main()
                 cout << "Patitent Added!!"<<endl;
                 cout << "-----------------------------------------------" << endl;
 
+            //Saving patient information to file
                 fileOut.open("Patients.txt", ios::app);
                 fileOut <<"Patient Name: "<< name2 << "\n";
                 fileOut <<"Patient Age: "<< age << "\n";
@@ -66,6 +71,8 @@ int main()
                 goto restart;
 
             }
+
+            //Reading patient information
             else if (patNum == 2){
 
                 fileIn.open("Patients.txt");
@@ -77,11 +84,13 @@ int main()
             goto restart;
             }
             
+            //Accessing medical inventory
             else if (patNum == 3){
                 cout << "1. Add a laboratory equipment"<< endl
                      << "2. Access laboratory equipment information"<<endl;
                 cin >> patNum;
-
+                
+                //Adding an equipment
                 if (patNum ==1){
                     cout << "Instead of a space between words please enter \"_\" \n";
                     cout << "Equipment Name: ";
@@ -108,15 +117,16 @@ int main()
                     fileOut.close();
                     goto restart;
                 }
-            
+                
+                //Reading equipment information
                 else if (patNum == 2){
-                fileIn.open("Equipments.txt");
+                    fileIn.open("Equipments.txt");
 
-                while (getline(fileIn,line)){
-                    cout << line << endl;
-                }
-                fileIn.close();
-                goto restart;
+                    while (getline(fileIn,line)){
+                        cout << line << endl;
+                    }
+                    fileIn.close();
+                    goto restart;
                 }
             cout << "-----------------------------------------------" << endl;
             }
@@ -133,6 +143,7 @@ int main()
     }
     else if (ask1 == 2){
         
+        //Asking user to choose
         cout << "1. Access some doctors information "<<endl
              << "2. Calculate medicine price"<<endl
              << "3. Calculate medical laboratory test price"<<endl
@@ -140,6 +151,7 @@ int main()
         cin >> ask2;
         cout << "-----------------------------------------------" << endl;
         
+        //Reading some employee information
         if (ask2 == 1){
             fileIn.open("Employee.txt");
             
@@ -150,6 +162,7 @@ int main()
             goto restart;
         }
 
+        //Calculating medicine price
         else if (ask2==2){
             cout << "Medicines" << endl
                  << "1. Analgesics/Pain Relievers" << endl
@@ -192,6 +205,7 @@ int main()
 
         }
 
+        //Calculating Laboratory test price
         else if (ask2 == 3){
             cout << "Medical Laboratory" << endl
                  << "1. MRI" << endl
@@ -233,6 +247,8 @@ int main()
                 goto restart;
             }
         }
+
+        //Asking for a body part that is in pain and the level of the pain
         else if (ask2 == 4){
             cout << "Which part of their body hurts? (Enter the number): "<< endl;  
             cout << "1. Head parts"<< endl
@@ -275,6 +291,7 @@ int main()
                 assignDr = "Nurse Nahily Asarf";
             }
 
+            //Entering patient information to see their assigned Dr. / Nurse
             cout << "Instead of a space between words please enter \"_\" \n";
             cout << "Name: ";
             cin >> name2;
@@ -282,22 +299,25 @@ int main()
             cin >> age;
             cout << "Gender: ";
             cin >> gender;
-            cout << "Ticket Price: ";
+            cout << "Card Price: ";
             cin >> price;
             cout << "-----------------------------------------------" << endl;
             pat.setData(name2, age, gender, assignDr);
             pat.getData();
-            cout << "Ticket Price: "<< price << endl;
+            cout << "Card Price: "<< price << endl;
             cout << "\nGo to the door that has the name of the doctor that is assigned to you." << endl;
             cout << "-----------------------------------------------" << endl;
             goto restart;
         }
     }
 
+    //Asking the user to choose
     else if (ask1 == 3){
         cout << "1. Add an emergency patient"<< endl
              << "2. Access emergency patient information"<<endl;
         cin >> patNum;
+
+        //First it tells the user taken beds and enter the patient information
         if (patNum == 1){
             int lines = 0;
             string line;
@@ -340,6 +360,8 @@ int main()
                 fileOut.close();
                 goto restart;
         }
+
+        //Reading emergency patient information
         else if (patNum == 2){
             fileIn.open("EMERGENCY.txt");
 
