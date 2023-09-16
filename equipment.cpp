@@ -1,4 +1,4 @@
-
+//Class for equipment
 class Equipment
 {
     string name;
