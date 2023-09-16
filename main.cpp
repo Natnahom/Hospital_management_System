@@ -349,8 +349,9 @@ int main()
                 cout << "-----------------------------------------------" << endl;
                 pat.setData2(name2, age, gender,assignDr,sickness);
                 pat.getData2();
-                cout << "Emergency Patitent Added!!"<<endl;
+                cout << "Emergency Patient Added!!"<<endl;
                 cout << "-----------------------------------------------" << endl;
+                
                 fileOut.open("EMERGENCY.txt", ios::app);
                 fileOut <<"Patient Name: "<< name2 << "\n";
                 fileOut <<"Patient Age: "<< age << "\n";
