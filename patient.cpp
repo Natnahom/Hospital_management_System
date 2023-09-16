@@ -1,4 +1,4 @@
-
+//Class that is used for taking patient information
 class Patient
 {
     string name;

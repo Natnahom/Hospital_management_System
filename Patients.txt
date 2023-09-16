@@ -2,7 +2,7 @@ Name: Mr. Alemu Abebe
 Age: 64
 Gender: M
 Assigned Doctor/Nurse: Dr. Yilikal Tadele
-Patient condition: Critical in Influenza (Flu)
+Patient condition: Critical in Influenza (Flu), allergic to peanuts.
 -----------------------------------------------
 Name: Mr Nega Tesema
 Age: 57
@@ -15,4 +15,10 @@ Age: 38
 Gender: M
 Assigned Doctor/Nurse: Dr. Biruk Tasew
 Patient condition: Advanced Stage HIV/AIDS
+-----------------------------------------------
+Patient Name: Ayele_Gobena
+Patient Age: 34
+Gender: M
+Patient's Assigned Doctor/Nurse: Dr._Eleni_Asfaw
+Patients condition: CONDITION:critical_Head_trauma//ALERGIES:pennuts//HISTORY:car_accident
 -----------------------------------------------

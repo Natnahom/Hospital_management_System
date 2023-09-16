@@ -7,7 +7,8 @@ using namespace std;
 int main()
 {
     // Variables used in the program
-    int ask1,ask2, age, patNum, hurt, pain, price=0;
+    int ask1,ask2, age, patNum, hurt, pain; 
+    float price=0;
     string assignDr, name, name2, sickness, line;
     char gender;
     ofstream fileOut;

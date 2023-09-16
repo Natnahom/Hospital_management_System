@@ -1,4 +1,4 @@
-
+//Class that is used for taking equipment information
 class Equipment
 {
     string name;
